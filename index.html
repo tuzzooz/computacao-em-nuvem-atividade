@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computação em Nuvem I - Atividade Prática</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #0ea5e9;
+      --dark: #0f172a;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #334155;
+      --text-heading: #0f172a;
+      --border: #e2e8f0;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--dark), #1e293b);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 4px solid var(--primary);
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.3);
+      color: #93c5fd;
+      border: 1px solid rgba(147, 197, 253, 0.4);
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+
+    header p {
+      color: #94a3b8;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .student-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      max-width: 500px;
+      margin: 1.5rem auto 0;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .student-card span strong {
+      color: #38bdf8;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: -2rem auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      color: var(--text-heading);
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 0.75rem;
+    }
+
+    .badge-icon {
+      background: #eff6ff;
+      color: var(--primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .grid-item {
+      background: #f8fafc;
+      padding: 1.25rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .grid-item h3 {
+      color: var(--text-heading);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 1.75rem;
+    }
+
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .status-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .status-box .pulse-dot {
+      width: 12px;
+      height: 12px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #64748b;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-badge">Prática 2 — Computação em Nuvem I</div>
+    <h1>Publicação de Aplicação em Nuvem</h1>
+    <p>Atividade Prática Hands-On de Exploração de Modelos de Serviço e Plataformas de Nuvem</p>
+
+    <div class="student-card">
+      <span><strong>Aluno(a):</strong> [Seu Nome Completo]</span>
+      <span><strong>Turma:</strong> Computação em Nuvem I</span>
+      <span><strong>Data de Publicação:</strong> 27/09/2026</span>
+      <span><strong>Plataforma de Deploy:</strong> Nuvem PaaS / Static Web Hosting</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="status-box">
+        <div class="pulse-dot"></div>
+        <div>
+          <strong>Aplicação ativa e em produção!</strong><br>
+          Esta página está hospedada em uma infraestrutura moderna de computação em nuvem com alta disponibilidade e distribuição global via CDN.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge-icon">1</span> O que é Computação em Nuvem?</h2>
+      <p>
+        Segundo a definição canônica do <strong>NIST (Special Publication 800-145)</strong>, a computação em nuvem é um modelo tecnológico que permite acesso onipresente, conveniente e sob demanda por meio de rede a um conjunto compartilhado de recursos computacionais configuráveis (tais como redes, servidores, armazenamento, aplicações e serviços), capazes de serem rapidamente provisionados e liberados com mínimo esforço de gerenciamento ou interação com o provedor de serviços.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge-icon">2</span> As Cinco Características Essenciais (NIST SP 800-145)</h2>
+      <ul class="features-list">
+        <li><strong>Autoatendimento sob Demanda (On-demand Self-service):</strong> O usuário provisiona recursos (CPU, armazenamento, rede) unilateralmente e automaticamente, sem precisar de aprovação manual do suporte.</li>
+        <li><strong>Amplo Acesso à Rede (Broad Network Access):</strong> Recursos disponíveis via rede acessíveis por mecanismos padronizados em plataformas heterogêneas (smartphones, tablets, notebooks e estações de trabalho).</li>
+        <li><strong>Pool de Recursos Compartilhados (Resource Pooling):</strong> Os recursos computacionais do provedor são agrupados para atender múltiplos clientes no modelo multi-tenant, com alocação dinâmica e isolamento lógico.</li>
+        <li><strong>Elasticidade Rápida (Rapid Elasticity):</strong> Capacidades computacionais podem ser elástica e automaticamente escaladas para cima ou para baixo, acompanhando flutuações de demanda em tempo real.</li>
+        <li><strong>Serviço Mensurável (Measured Service):</strong> O uso de recursos é monitorado, controlado e cobrado de maneira transparente através de métricas precisas (modelo <em>pay-as-you-go</em>).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge-icon">3</span> Modelos de Serviço em Nuvem</h2>
+      <div class="grid-3">
+        <div class="grid-item">
+          <h3>IaaS (Infraestrutura)</h3>
+          <p>Fornece máquinas virtuais, discos e redes brutas. O cliente gerencia o Sistema Operacional, runtimes e aplicações. Ex: AWS EC2, Azure VM, DigitalOcean.</p>
+        </div>
+        <div class="grid-item">
+          <h3>PaaS (Plataforma)</h3>
+          <p>Fornece o ambiente de execução pré-configurado. O cliente gerencia apenas código e dados. O provedor cuida de SO, escalabilidade e patches. Ex: Vercel, Render, AWS Elastic Beanstalk.</p>
+        </div>
+        <div class="grid-item">
+          <h3>SaaS (Software)</h3>
+          <p>Software completo pronto para consumo final via web ou aplicativo. O cliente apenas consome e configura usuários. Ex: Google Workspace, Microsoft 365, Salesforce.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge-icon">4</span> Análise Técnica desta Publicação</h2>
+      <p>
+        Esta página web representa a aplicação prática do modelo <strong>Platform as a Service (PaaS) / Static Web Hosting</strong>. 
+        Para sua publicação, coube ao desenvolvedor exclusivamente a elaboração do código (HTML, CSS e conteúdo semântico) e o envio do artefato para a plataforma. 
+        Toda a infraestrutura subjacente — incluindo provisionamento de servidores web de alta performance, configuração de zonas DNS, emissão e renovação automática de certificado criptográfico SSL/TLS (HTTPS), compressão de arquivos, roteamento e distribuição geográfica em Edge Locations via CDN (Content Delivery Network) — ficou integralmente sob a responsabilidade do provedor de nuvem.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Atividade Acadêmica de Computação em Nuvem I &bull; 2026</p>
+  </footer>
+
+</body>
+</html>
