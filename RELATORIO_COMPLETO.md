@@ -1,9 +1,9 @@
 # RELATÓRIO TÉCNICO E PRÁTICO: COMPUTAÇÃO EM NUVEM I
 ## Contextualização, Modelos de Implantação, Características, Desafios e Modelos de Serviço em Nuvem
 
-| Aluno(a) | Turma | Data de entrega | Formato de entrega |
-| :--- | :--- | :--- | :--- |
-| **[Preencha seu Nome Completo]** | **Computação em Nuvem I** | **27/09/2026** | Relatório técnico com respostas dissertativas fundamentadas, matrizes comparativas e evidências de prática hands-on. |
+| Aluno(a) | Turma | Formato de entrega |
+| :--- | :--- | :--- |
+| **Otávio Vianna Lima** | **Computação em Nuvem I** | Relatório técnico com respostas dissertativas fundamentadas, matrizes comparativas e evidências de prática hands-on. |
 
 ---
 
@@ -339,7 +339,7 @@ Para o cumprimento integral desta etapa prática sem a necessidade de inclusão 
 | [ Vercel Dashboard ]   Project: computacao-em-nuvem-atividade         Status: Ready ●   |
 | Production Deployment: https://computacao-em-nuvem-atividade.vercel.app                |
 | Domains: computacao-em-nuvem-atividade.vercel.app (SSL Active)                          |
-| Git Branch: main  |  Environment: Production  |  Created: 27/09/2026 21:00              |
+| Git Branch: main  |  Environment: Production  |  Deployment: Active                      |
 +-----------------------------------------------------------------------------------------+
 ```
 
@@ -454,11 +454,11 @@ flowchart TD
 
 ## REFERÊNCIAS BIBLIOGRÁFICAS
 
-1. **MELL, Peter; GRANCE, Timothy.** *The NIST Definition of Cloud Computing*. Recommendations of the National Institute of Standards and Technology. NIST Special Publication 800-145, Gaithersburg: National Institute of Standards and Technology (NIST), 2011. Disponível em: <https://csrc.nist.gov/publications/detail/sp/800-145/final>. Acesso em: 27 set. 2026.
-2. **BRASIL.** *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União, Brasília, DF, 15 ago. 2018. Disponível em: <http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm>. Acesso em: 27 set. 2026.
-3. **BANCO CENTRAL DO BRASIL (BACEN).** *Resolução CMN nº 4.893, de 23 de dezembro de 2020*. Dispõe sobre a política de segurança cibernética e sobre os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem a serem observados pelas instituições autorizadas a funcionar pelo Banco Central do Brasil. Disponível em: <https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=4893>. Acesso em: 27 set. 2026.
-4. **AMAZON WEB SERVICES (AWS).** *Amazon EC2 Auto Scaling User Guide*. AWS Documentation, 2026. Disponível em: <https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html>. Acesso em: 27 set. 2026.
-5. **MICROSOFT AZURE.** *Visão geral da nuvem e modelos de serviço*. Microsoft Learn, 2026. Disponível em: <https://learn.microsoft.com/pt-br/azure/architecture/guide/technology-choices/compute-overview>. Acesso em: 27 set. 2026.
-6. **GOOGLE CLOUD.** *Documentação do Google Cloud Run e Arquiteturas Sem Servidor*. Google Cloud Docs, 2026. Disponível em: <https://cloud.google.com/run/docs>. Acesso em: 27 set. 2026.
-7. **CLOUD SECURITY ALLIANCE (CSA).** *Top Threats to Cloud Computing: The Pandemic Eleven*. CSA Research Publications, 2022. Disponível em: <https://cloudsecurityalliance.org/research/working-groups/top-threats/>. Acesso em: 27 set. 2026.
+1. **MELL, Peter; GRANCE, Timothy.** *The NIST Definition of Cloud Computing*. Recommendations of the National Institute of Standards and Technology. NIST Special Publication 800-145, Gaithersburg: National Institute of Standards and Technology (NIST), 2011. Disponível em: <https://csrc.nist.gov/publications/detail/sp/800-145/final>.
+2. **BRASIL.** *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União, Brasília, DF, 15 ago. 2018. Disponível em: <http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm>.
+3. **BANCO CENTRAL DO BRASIL (BACEN).** *Resolução CMN nº 4.893, de 23 de dezembro de 2020*. Dispõe sobre a política de segurança cibernética e sobre os requisitos para a contratação de serviços de processamento e armazenamento de dados e de computação em nuvem a serem observados pelas instituições autorizadas a funcionar pelo Banco Central do Brasil. Disponível em: <https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=4893>.
+4. **AMAZON WEB SERVICES (AWS).** *Amazon EC2 Auto Scaling User Guide*. AWS Documentation, 2026. Disponível em: <https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html>.
+5. **MICROSOFT AZURE.** *Visão geral da nuvem e modelos de serviço*. Microsoft Learn, 2026. Disponível em: <https://learn.microsoft.com/pt-br/azure/architecture/guide/technology-choices/compute-overview>.
+6. **GOOGLE CLOUD.** *Documentação do Google Cloud Run e Arquiteturas Sem Servidor*. Google Cloud Docs, 2026. Disponível em: <https://cloud.google.com/run/docs>.
+7. **CLOUD SECURITY ALLIANCE (CSA).** *Top Threats to Cloud Computing: The Pandemic Eleven*. CSA Research Publications, 2022. Disponível em: <https://cloudsecurityalliance.org/research/working-groups/top-threats/>.
 8. **ERL, Thomas; PUTTINI, Ricardo; MAHMOOD, Zaigham.** *Cloud Computing: Concepts, Technology & Architecture*. Upper Saddle River: Prentice Hall, 2013.
